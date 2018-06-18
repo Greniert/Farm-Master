@@ -1,0 +1,92 @@
+/* ******MISE EN PAGE DU FORMAULAIRE DE VALIDATION ******/
+
+@import url(reset.css);
+body,
+html {
+    font-family: "Trebuchet MS", serif;
+    font-size: 62.5%;
+    color: black;
+}
+
+p {
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    width: 150px;
+    height: 22px;
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+input {
+    width: 90%;
+    height: 40px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 0;
+    margin-top: 2%;
+    margin-left: 4%;
+    padding-left: 1%;
+    font-size: 2rem;
+}
+
+label {
+    padding-top: 40px;
+}
+
+form label:first-child {
+    padding: 0;
+}
+
+input[type="radio"] {
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 40px;
+    font-size: 2rem;
+}
+
+span {
+    color: red;
+    margin-right: 7px;
+    font-size: 2rem;
+}
+
+#etoile {
+    margin-left: 35px;
+    color: red;
+    margin-right: 7px;
+    font-size: 2rem;
+}
+
+input[type="submit"] {
+    width: 200px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10% 25%;
+    color: black;
+    font-size: 2rem;
+}
+
+.txt {
+    font-size: 2rem;
+    color: white;
+}
+
+a {
+    font-size: 1.5rem;
+}
+
+.legalint {
+    font-size: 1rem;
+}
+
+#legalt {
+    font-size: 1.5rem;
+}
+
+
+/******FIN DE LA MISE EN PAGE DU FORMULAIRE DE VALIDATION*****/

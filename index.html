@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>FARM MASTER</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--link rel="stylesheet" href="css/css_formulaire.css"-->
+
+</head>
+
+<body>
+    <div class="mainframe">
+        <img class="titletop" src="img/Farmmaster.png" width="500" height="200" alt="farm Master Memory game" />
+        <div class="audio">
+            <audio controls loop autoplay>
+                <source src="mus/audio.mp3">
+                <source src="mus/audio.ogg">
+                    Votre navigateur est trop vieux pour supporter l'audio, veuillez le mettre à jour.
+            </audio><br>
+            <a href="http://thedarkpiano.com/">Site web de l'auteur de la Bande Son</a>
+        </div>
+        <div class="button" id="legalt">
+            <p>Mentions légales</p>
+        </div>
+
+        <div class="beginning" id="begin">
+            <input type="button" id="startbtn" value="Démarrer le jeu" style="width: 200px">
+        </div>
+
+        <div class="legalint" id="legaltxt" style="display : none">
+            <p>Jargon juridique 1</p><br>
+            <p>In pretium nisl placerat laoreet congue. Nullam ante metus, venenatis sed nisi a, rhoncus interdum purus. Nulla vel nulla ac nisi malesuada malesuada. Pellentesque velit lacus, lacinia non eleifend vitae, hendrerit vel turpis. Ut vehicula,
+                tellus eget bibendum condimentum, nulla justo pretium odio, id finibus lorem massa vel enim. Nunc bibendum, nisl sit amet dictum mollis, lacus massa congue erat, ac auctor lacus dolor ut ex</p><br>
+            <p>Jargon juridique 2</p><br>
+            <p>In pretium nisl placerat laoreet congue. Nullam ante metus, venenatis sed nisi a, rhoncus interdum purus. Nulla vel nulla ac nisi malesuada malesuada. Pellentesque velit lacus, lacinia non eleifend vitae, hendrerit vel turpis. Ut vehicula,
+                tellus eget bibendum condimentum, nulla justo pretium odio, id finibus lorem massa vel enim. Nunc bibendum, nisl sit amet dictum mollis, lacus massa congue erat, ac auctor lacus dolor ut ex</p><br>
+            <p>Jargon juridique 3</p><br>
+            <p>In pretium nisl placerat laoreet congue. Nullam ante metus, venenatis sed nisi a, rhoncus interdum purus. Nulla vel nulla ac nisi malesuada malesuada. Pellentesque velit lacus, lacinia non eleifend vitae, hendrerit vel turpis. Ut vehicula,
+                tellus eget bibendum condimentum, nulla justo pretium odio, id finibus lorem massa vel enim. Nunc bibendum, nisl sit amet dictum mollis, lacus massa congue erat, ac auctor lacus dolor ut ex</p>
+
+            <div class="button" id="closebtn" style="display : inline-block">
+                <p>FERMER FENETRE</p>
+            </div>
+        </div>
+
+        <div class="gameint" id="main" style="display: none">
+            <div class="gamezone" id="game" style="display: none">
+                <div class="interface" id="sideint" style="display: none">
+                    <p>Timer :
+                        <span id="mc">0</span> : <span id="sc">0</span> - Nombre de coups :
+                        <span id="cc">0</span> Coups - Animaux trouvés :
+                        <span id="ac">0</span> trouvés</p>
+
+                </div>
+            </div>
+
+            <div class="formulaire" id="form" style="display: none">
+                <form name=" formulaire" method="post" action="formulaire.php" onsubmit="return verif()">
+                    <h2>Bravo vous avez réussi ! Veuillez enregistrer votre score !</h2>
+                    <label for="civilite">Civilité</label>
+                    <input type="radio" name="civilite" id="femme" value="Mme">
+                    <span class="txt">Mme</span>
+                    <input type="radio" name="civilite" id="homme" value="M">
+                    <span class="txt">M</span><span class="etoile">*</span><br/><br/>
+
+                    <label for="nom"><span class="etoile">*</span>Nom:</label><br/>
+                    <input type="text" name="nom" id="nom"><br/>
+
+                    <label for="prenom"><span class="etoile">*</span>Prénom:</label><br/>
+                    <input type="text" name="prenom" id="prenom"><br/>
+
+                    <label for="email"><span class="etoile">*</span>Email: </label><br/>
+                    <input type="email" name="email" id="email"><br/><br/>
+
+                    <span class="etoile">* champ obligatoire</span><br/><br/>
+
+                    <label>Temps réalisé : <span id="resm">0</span> : <span id="ress">0</span></label><br>
+                    <label>Nombre de coups : <span id="resc">0</span> Coups</label><br/>
+                    <input type="submit" value="envoyer">
+
+                </form>
+
+                <script src="js/js_formulaireverif.js" type="text/javascript" charset="utf-8"></script>
+            </div>
+        </div>
+    </div>
+    <script src="js/game.js"></script>
+    <script src="js/interface.js"></script>
+</body>
+
+</html>
