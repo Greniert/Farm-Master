@@ -137,7 +137,7 @@ const match = () => { //
     });
 };
 
-const resetGuesses = () => { // bloc de code pour reset les choix 
+const resetGuesses = () => { // bloc de code pour reset les choix
     firstGuess = '';
     secondGuess = '';
     count = 0;
@@ -177,10 +177,10 @@ grid.addEventListener('click', event => {
         if (firstGuess && secondGuess) {
             if (firstGuess === secondGuess) {
                 var ccv = document.getElementById("cc").textContent;
-                ccv++;
+                ccv++; //incrémente le conmpteur de coup
                 cc.textContent = ccv;
                 var acv = document.getElementById("ac").textContent;
-                acv++;
+                acv++; //incrémente le nombre d'Animaux trouvé
                 ac.textContent = acv;
                 if (acv == 10) {
                     clearInterval(time);
