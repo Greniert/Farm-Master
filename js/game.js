@@ -53,6 +53,7 @@ function gaming() {
 
 
 
+
 const cardsArray = [{ // créer un tableau d'image
         'name': 'canari',
         'img': 'img/canari.jpg',
@@ -100,7 +101,7 @@ const gameGrid = cardsArray.concat(cardsArray) //duplique le tableau d'image pou
 
 let firstGuess = ''; // 1 er choix avec des '' vides pour que l'image soit récupérer
 let secondGuess = ''; // Pareille pour 2 eme choix
-let count = 0;
+let count = 0; // attribut la valeur 0 à la variables count qui permettra par la suite de ne pas choisir plus de 2 carte en même temps.
 let previousTarget = null;
 let delay = 1200; // permet de choisir le temps avant que les image ne se retourne
 
@@ -125,13 +126,13 @@ gameGrid.forEach(item => { // pour chaque item de GameGrid (ligne)
     back.style.backgroundImage = `url(${img})`; // récupère l'image back.png
 
     grid.appendChild(card); // place card en enfant de Grid
-    card.appendChild(front);
+    card.appendChild(front);//et front et back en enfant de card 
     card.appendChild(back);
     //place front et back en enfant de card
 }); // Soit une fonction qui créer pour chaque image du tableau des une carte avec un front et un back
 
 const match = () => { //
-    const selected = document.querySelectorAll('.selected');
+    const selected = document.querySelectorAll('.selected'); // décleche l'animation de retrournement des cartes qui se trouve dans le CSS
     selected.forEach(card => {
         card.classList.add('match'); // ajoute la classe 'match' au image lorsqu'elles match, ce qui permet grâce au css de changer son design
     });
@@ -149,7 +150,7 @@ const resetGuesses = () => { // bloc de code pour reset les choix
     });
 };
 
-grid.addEventListener('click', event => { // code condition 
+grid.addEventListener('click', event => { // gére la selction des cartes
 
     const clicked = event.target;
 
