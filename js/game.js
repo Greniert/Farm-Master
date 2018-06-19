@@ -149,7 +149,7 @@ const resetGuesses = () => { // bloc de code pour reset les choix
     });
 };
 
-grid.addEventListener('click', event => {
+grid.addEventListener('click', event => { // code condition 
 
     const clicked = event.target;
 
@@ -162,7 +162,7 @@ grid.addEventListener('click', event => {
         return;
     }
 
-    if (count < 2) {
+    if (count < 2) { // empèche de clicker sur plus de 2 carte à la fois.
         count++;
         if (count === 1) {
             firstGuess = clicked.parentNode.dataset.name;
@@ -182,13 +182,13 @@ grid.addEventListener('click', event => {
                 var acv = document.getElementById("ac").textContent;
                 acv++; //incrémente le nombre d'Animaux trouvé
                 ac.textContent = acv;
-                if (acv == 10) {
+                if (acv == 10) { // arréte le temps si le nombre de paire est égale à 10
                     clearInterval(time);
-                    formd.style.display = "inline-block";
-                    gamed.style.display = "none";
-                    resmd.textContent = document.getElementById("mc").textContent;
-                    ressd.textContent = document.getElementById("sc").textContent;
-                    rescd.textContent = document.getElementById("cc").textContent;
+                    formd.style.display = "inline-block"; // affiche la zone formulaire
+                    gamed.style.display = "none"; // cache la zone de jeu
+                    resmd.textContent = document.getElementById("mc").textContent; // récupération du temps minute
+                    ressd.textContent = document.getElementById("sc").textContent;// récupération du temps seconde
+                    rescd.textContent = document.getElementById("cc").textContent;// récupération du nombre de coups
 
                 }
                 setTimeout(match, delay);
