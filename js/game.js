@@ -175,9 +175,7 @@ grid.addEventListener('click', event => { // gére la selction des cartes
 
         if (firstGuess && secondGuess) {
             if (firstGuess === secondGuess) {
-                var ccv = document.getElementById("cc").textContent;
-                ccv++; //incrémente le conmpteur de coup
-                cc.textContent = ccv;
+            
                 var acv = document.getElementById("ac").textContent;
                 acv++; //incrémente le nombre d'Animaux trouvé
                 ac.textContent = acv;
