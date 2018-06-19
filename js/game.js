@@ -175,7 +175,7 @@ grid.addEventListener('click', event => { // gére la selction des cartes
 
         if (firstGuess && secondGuess) {
             if (firstGuess === secondGuess) {
-            
+
                 var acv = document.getElementById("ac").textContent;
                 acv++; //incrémente le nombre d'Animaux trouvé
                 ac.textContent = acv;
@@ -194,7 +194,7 @@ grid.addEventListener('click', event => { // gére la selction des cartes
             }
             setTimeout(resetGuesses, delay);
             var ccv = document.getElementById("cc").textContent;
-            ccv++;
+            ccv++; // compte le nombre de coup qu'il y ai une paire ou non.
             cc.textContent = ccv;
             console.log(ccv);
             console.log(acv);
@@ -204,4 +204,4 @@ grid.addEventListener('click', event => { // gére la selction des cartes
 
 });
 
-/* https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/ <- Code suivi à l'aide de ce Tutoriel  */
+/* https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/ <- Code suivi à l'aide de ce Tutoriel et adapté par nos soins */
