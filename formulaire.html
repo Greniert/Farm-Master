@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/css_formulaire.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>formulaire</title>
   </head>
@@ -12,11 +12,11 @@
   <body>
     <div class="page_succes">
   <!-- FORMULAIRE DE VALIDATION -->
-    <p>BRAVO VOUS AVEZ REUSSI  !!!!<br/> Enregistrez-vous pour valider votre score</p>
+
       <div class = "formulaire">
 
         <form  name=" formulaire" method ="post" action="formulaire.php" onsubmit = "return verif()" >
-
+            <h2>BRAVO VOUS AVEZ REUSSI  !!!!<br/> Enregistrez-vous pour valider votre score</h2>
 
             <label for ="civilite">Civilité</label>
               <input  type="radio" name="civilite" id="femme" value = "Mme">Mme
@@ -33,7 +33,8 @@
 
             <span>* champ obligatoire</span><br/><br/>
 
-            <label>Temps réalisé: <!-- TEMPS REPRIS DU TIMER EN JS--> </label><br/><br/>
+            <label>Temps réalisé : <span id="resm">0</span> : <span id="ress">0</span></label><br>
+            <label>Nombre de coups : <span id="resc">0</span> Coups</label><br/>
           <input type="submit" value="envoyer">
 
         </form>
