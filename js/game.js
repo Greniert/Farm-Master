@@ -126,7 +126,7 @@ gameGrid.forEach(item => { // pour chaque item de GameGrid (ligne)
     back.style.backgroundImage = `url(${img})`; // récupère l'image back.png
 
     grid.appendChild(card); // place card en enfant de Grid
-    card.appendChild(front);//et front et back en enfant de card 
+    card.appendChild(front);//et front et back en enfant de card
     card.appendChild(back);
     //place front et back en enfant de card
 }); // Soit une fonction qui créer pour chaque image du tableau des une carte avec un front et un back
@@ -154,12 +154,10 @@ grid.addEventListener('click', event => { // gére la selction des cartes
 
     const clicked = event.target;
 
-    if (
-        clicked.nodeName === 'SECTION' ||
-        clicked === previousTarget ||
-        clicked.parentNode.classList.contains('selected') ||
-        clicked.parentNode.classList.contains('match')
-    ) {
+    if (clicked.nodeName === 'SECTION' ||
+    clicked === previousTarget ||
+    clicked.parentNode.classList.contains('selected') ||
+    clicked.parentNode.classList.contains('match')){
         return;
     }
 
@@ -207,3 +205,5 @@ grid.addEventListener('click', event => { // gére la selction des cartes
     }
 
 });
+
+/* https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/ <- Code suivi à l'aide de ce Tutoriel  */
